@@ -3,7 +3,7 @@
   <h3 align="center">Bee-have</h3>
 
   <p align="center">
-    An Awesome ReadME Generator To Jumpstart Your Projects!
+    A project to bring awareness to the decline of bee populations
     <br/>
     <br/>
   </p>
