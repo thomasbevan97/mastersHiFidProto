@@ -1,0 +1,20 @@
+radio.onReceivedString(function (receivedString) {
+    // If function set to recognize different responses by the user
+    incoming = parseInt(receivedString)
+    // If the user respondes "Yes" to the question, the motor turns to 45 degrees
+    if (incoming == 1) {
+        pins.servoWritePin(AnalogPin.P0, 45)
+    }
+    // If the user responds "No" to the question, the motor turns to 90 degrees
+    if (incoming == 2) {
+        pins.servoWritePin(AnalogPin.P0, 90)
+    }
+})
+let incoming = 0
+//Radio of the microbit set to 53 
+radio.setGroup(53)
+//The position of the motor is set to 90 degrees by default
+pins.servoWritePin(AnalogPin.P0, 90)
+basic.forever(function () {
+    basic.showNumber(incoming)
+})
