@@ -3,6 +3,7 @@ import { SerialPort, ReadlineParser } from 'serialport'
 let quizSize = 4; // Defines size of questionnaire 
 
 // Defines pre stored questions in questionnaire
+// 
 let quizStorage = [
   "2222",
   "1212",
@@ -93,9 +94,11 @@ async function run() {
     microbit.write(result+'\n')      
   }
  
+  // Recieve data from arduino
   arduinoParser.on('data', (data) => {
     console.log('ARDUINO: ' + data)
       
+    // Restart timeout as response is redieved
     restartCountdown(60, timeout)
     
     microbit.write(data + '\n')
