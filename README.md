@@ -49,10 +49,10 @@ Upload code to relevant Microbit
 Arduino Uno (Grove Base Shield + Grove Dual Buttons):
 Upload code to Arduino
 
-4 Aditional Microbits required
-2 Motors
-14 single colour LEDs
-2 Neopixels
+* 4 Aditional Microbits required
+* 2 Motors
+* 14 single colour LEDs
+* 2 Neopixels
 
 ### Installation
 
