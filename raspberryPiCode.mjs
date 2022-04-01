@@ -18,6 +18,8 @@ for(let i = 0; i < quizStorage.length; i++){
   for(let k = 0; k < quizSize; k++){
     temp += parseInt(quizStorage[i][k]);
   }
+  
+  // Detemins what the average question response is and assigns to section
   if(temp / quizSize > 1.5){
     section = 2;
   } else {
@@ -29,7 +31,7 @@ for(let i = 0; i < quizStorage.length; i++){
 
  let result = trial;
  
-// When recieves from serial arduino
+// When recieves from serial arduino timeout resets
 var timeoutObject = null;
 function restartCountdown(timeout, callback) {
   if (timeoutObject) clearTimeout(timeoutObject)
@@ -41,7 +43,7 @@ function restartCountdown(timeout, callback) {
 
 
 
-
+// Finds which ports the arduino and microbit are connected to
 async function findPorts(vidpidList) {
   const results = []
   let ports = await SerialPort.list()
@@ -79,9 +81,12 @@ async function run() {
     arduino.write(data + '\n')
   })
  
+  // If 60 seconds passes from the last user input
   function timeout() {
     // Send result variable the average to the microbit for example "1212"
     console.log('TIMEOUT!')
+    
+    // Send average from storage to the microbit
     for(let z = 0; z < 3; z++){
       microbit.write(result+'\n')  
     }
