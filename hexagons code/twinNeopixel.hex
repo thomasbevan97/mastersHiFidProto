@@ -1,0 +1,33 @@
+//Radio is recieveing String from the main mickrobit
+radio.onReceivedString(function (receivedString) {
+    incoming = parseInt(receivedString)
+    //If the user responds "Yes" to the question (String 1 received), the neopixel turns color red
+    if (incoming == 1) {
+        strip.showColor(neopixel.colors(NeoPixelColors.Red))
+        Strip_2.showColor(neopixel.colors(NeoPixelColors.Red))
+        strip_3.showColor(neopixel.colors(NeoPixelColors.Red))
+    }
+    //If user responds "No" to the question (String 2 received), the neopixel turns color green
+    if (incoming == 2) {
+        strip.showColor(neopixel.colors(NeoPixelColors.Green))
+        Strip_2.showColor(neopixel.colors(NeoPixelColors.Green))
+        strip_3.showColor(neopixel.colors(NeoPixelColors.Green))
+    }
+})
+//Default settinng
+let incoming = 0
+let strip_3: neopixel.Strip = null
+let Strip_2: neopixel.Strip = null
+let strip: neopixel.Strip = null
+//The radio of the mickrobit is 51
+radio.setGroup(51)
+//Neopixel set to color purple by default
+strip = neopixel.create(DigitalPin.P0, 8, NeoPixelMode.RGB)
+strip.showColor(neopixel.colors(NeoPixelColors.Purple))
+Strip_2 = neopixel.create(DigitalPin.P1, 8, NeoPixelMode.RGB)
+Strip_2.showColor(neopixel.colors(NeoPixelColors.Purple))
+strip_3 = neopixel.create(DigitalPin.P1, 8, NeoPixelMode.RGB)
+strip_3.showColor(neopixel.colors(NeoPixelColors.Purple))
+basic.forever(function () {
+    basic.showNumber(incoming)
+})
