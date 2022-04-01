@@ -1,31 +1,33 @@
 import { SerialPort, ReadlineParser } from 'serialport'
 
-let quizSize = 4;
+let quizSize = 4; // Defines size of questionnaire 
+
+// Defines pre stored questions in questionnaire
 let quizStorage = [
   "2222",
   "1212",
   "1122"
 ];
-let trial = "";
-let section = 0;
-let temp = 0;
 
-console.log(quizStorage.length);
+let trial = ""; // Defines empty string that would be sent to the microbit
+let section = 0;
+let temp = 0; // When determining average temp number that gets each option added to
+
+// Determines average of what is stored in storage
 for(let i = 0; i < quizStorage.length; i++){
   for(let k = 0; k < quizSize; k++){
     temp += parseInt(quizStorage[i][k]);
-  }console.log(temp);
+  }
   if(temp / quizSize > 1.5){
     section = 2;
   } else {
     section = 1;
   }
-  trial = trial + section;
-  console.log(trial);
+  trial = trial + section; // Append int as string to list of averages
 }
 
 
- let result = "1111"
+ let result = trial;
  
 // When recieves from serial arduino
 var timeoutObject = null;
@@ -81,9 +83,9 @@ async function run() {
     // Send result variable the average to the microbit for example "1212"
     console.log('TIMEOUT!')
     for(let z = 0; z < 3; z++){
-      microbit.write('1111'+'\n')  
+      microbit.write(result+'\n')  
     }
-    microbit.write('1111'+'\n')      
+    microbit.write(result+'\n')      
   }
  
   arduinoParser.on('data', (data) => {
