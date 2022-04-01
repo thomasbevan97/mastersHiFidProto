@@ -30,7 +30,7 @@ This project is the cide for a public disolay that is designed to raise awarenes
 
 ## Built With
 
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
+Programming languages include C and Javascript, using the software from MakeCode and Vim within NPM
 
 ## Getting Started
 
@@ -69,7 +69,7 @@ git clone https://github.com/thomaspauloehrling/Project-Name.git
 npm install
 ```
 
-3. Enter your API in `config.js`
+3. Install serialport from NPM
 
 ```sh
 npm install serialport
@@ -98,9 +98,8 @@ This project is not open for contribution as it is a masters degree project limi
 
 ## Authors
 
-* **Thomas Paul Oehrling** - *MSc Human Computer Interaction student* - [Thomas Paul Oehrling](https://github.com/ShaanCoding/) - *Arduino, Rapberry Pi and Central Microbit and README file*
-* **Anna Rykalová** - *MSc Human Computer Interaction student* - [Anna Rykalová]() - **
+* **Thomas Paul Oehrling** - *MSc Human Computer Interaction student* - [Thomas Paul Oehrling](https://github.com/thomaspauloehrling/) - *Arduino, Rapberry Pi and Central Microbit and README file*
+* **Anna Rykalová** - *MSc Human Computer Interaction student* - [Anna Rykalová]() - *Code for NeoPixel *
 * **Akash Umesh Wadekar** - *MSc Human Computer Interaction student* - [Akash]() - **
-* **Hazel** - *MSc Human Computer Interaction student* - [Hazel]() - **
 
 
