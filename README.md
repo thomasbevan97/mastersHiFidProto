@@ -19,7 +19,6 @@
   * [Prerequisites](#prerequisites)
   * [Installation](#installation)
 * [Usage](#usage)
-* [Roadmap](#roadmap)
 * [Contributing](#contributing)
 * [Authors](#authors)
 * [Acknowledgements](#acknowledgements)
@@ -42,13 +41,18 @@ To get a local copy up and running follow these simple example steps.
 ### Prerequisites
 
 Raspberry Pi:
+Follow installation instructions and run node on raspberry Pi program
 
 Microbit:
 Upload code to relevant Microbit 
 
-Arduino:
+Arduino Uno (Grove Base Shield + Grove Dual Buttons):
 Upload code to Arduino
 
+4 Aditional Microbits required
+2 Motors
+14 single colour LEDs
+2 Neopixels
 
 ### Installation
 
