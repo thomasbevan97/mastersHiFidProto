@@ -1,0 +1,25 @@
+radio.onReceivedString(function (receivedString) {
+     // If function set to recognize different responses by the user
+    incoming = parseInt(receivedString)
+    //If the user respondes "Yes" to the question, both pin1 and pin2 will be powered and all 10 leds light up。
+    if (incoming == 1) {
+        pins.digitalWritePin(DigitalPin.P2, 1)
+        pins.digitalWritePin(DigitalPin.P1, 1)
+    }
+    if (incoming == 2) {
+    // If the user responds "No" to the question, only pin1 will be powered and 4 leds at right turn off
+
+        pins.digitalWritePin(DigitalPin.P2, 0)
+        pins.digitalWritePin(DigitalPin.P1, 1)
+    }
+})
+//Initial setting
+let incoming = 0
+//Radio of the microbit set to 50
+radio.setGroup(50)
+//power off by default, all leds turn off
+pins.digitalWritePin(DigitalPin.P2, 0)
+pins.digitalWritePin(DigitalPin.P1, 0)
+basic.forever(function () {
+    basic.showNumber(incoming)
+})
