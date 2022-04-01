@@ -1,0 +1,28 @@
+serial.onDataReceived(serial.delimiters(Delimiters.NewLine), function () {
+    for (let index = 0; index < 3; index++) {
+        serial.writeLine(serial.readLine())
+        name = serial.readLine()
+        for (let k = 0; k <= name.length - 1; k++) {
+            l = 50 + k
+            radio.setGroup(l)
+            radio.sendString("" + (name[k]))
+        }
+    }
+    control.waitMicros(4)
+    for (let index = 0; index < 3; index++) {
+        serial.writeLine(serial.readLine())
+        name = serial.readLine()
+        for (let k = 0; k <= name.length - 1; k++) {
+            l = 50 + k
+            radio.setGroup(l)
+            radio.sendString("" + (name[k]))
+        }
+    }
+})
+let l = 0
+let name = ""
+serial.redirect(
+SerialPin.USB_TX,
+SerialPin.USB_RX,
+BaudRate.BaudRate9600
+)
