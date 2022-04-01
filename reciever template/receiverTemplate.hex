@@ -1,0 +1,8 @@
+radio.onReceivedString(function (receivedString) {
+    incoming = parseInt(receivedString)
+})
+let incoming = 0
+radio.setGroup(50)
+basic.forever(function () {
+    basic.showNumber(incoming)
+})
