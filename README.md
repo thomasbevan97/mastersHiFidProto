@@ -100,7 +100,7 @@ This project is not open for contribution as it is a masters degree project limi
 
 * **Thomas Paul Oehrling** - *MSc Human Computer Interaction student* - [Thomas Paul Oehrling](https://github.com/ShaanCoding/) - *Arduino, Rapberry Pi and Central Microbit and README file*
 * **Anna Rykalová** - *MSc Human Computer Interaction student* - [Anna Rykalová]() - **
-* **Akash** - *MSc Human Computer Interaction student* - [Akash]() - **
+* **Akash Umesh Wadekar** - *MSc Human Computer Interaction student* - [Akash]() - **
 * **Hazel** - *MSc Human Computer Interaction student* - [Hazel]() - **
 
 
