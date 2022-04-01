@@ -68,6 +68,7 @@ async function run() {
   const microbitDevice = ports[0]
   const arduinoDevice = ports[1]
  
+  // Open serialports for arduino amd microbit
   console.log('MICROBIT:' + microbitDevice.path)
   console.log('ARDUINO:' + arduinoDevice.path)
  
