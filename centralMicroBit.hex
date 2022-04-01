@@ -1,25 +1,35 @@
+// When a string is recieved on serial
 serial.onDataReceived(serial.delimiters(Delimiters.NewLine), function () {
+    
+    // Repeat sending three times as a remedy to bluetooth issues
     for (let index = 0; index < 3; index++) {
+        // Return line back to serial as a form of handshake to note that it is recieved
         serial.writeLine(serial.readLine())
+        
+        // Define name as input from serial
         name = serial.readLine()
+        
+        // Send to appropriate microbit on appropriate channel
         for (let k = 0; k <= name.length - 1; k++) {
-            l = 50 + k
-            radio.setGroup(l)
+            position = 50 + k
+            radio.setGroup(position)
             radio.sendString("" + (name[k]))
         }
     }
+    
+    // Delay as a remedy to the bluetooth congestion issue
     control.waitMicros(4)
     for (let index = 0; index < 3; index++) {
         serial.writeLine(serial.readLine())
         name = serial.readLine()
         for (let k = 0; k <= name.length - 1; k++) {
-            l = 50 + k
-            radio.setGroup(l)
+            position = 50 + k
+            radio.setGroup(position)
             radio.sendString("" + (name[k]))
         }
     }
 })
-let l = 0
+let position = 0
 let name = ""
 serial.redirect(
 SerialPin.USB_TX,
