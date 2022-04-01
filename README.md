@@ -21,7 +21,6 @@
 * [Usage](#usage)
 * [Contributing](#contributing)
 * [Authors](#authors)
-* [Acknowledgements](#acknowledgements)
 
 ## About The Project
 
@@ -82,7 +81,12 @@ The code from this project can be used for questionnaires, public displays and
 
 ## Roadmap
 
-See the [open issues](https://github.com/thomaspauloehrling/mastersHCIHiFidProto/issues) for a list of proposed features (and known issues).
+Open issues include:
+* a lack of solid reliability in communication between central microbit and the surrounding hexagons
+
+Future Features:
+* No tethering with wires between arduino  and Raspberry Pi
+* Added interactivity with the user such as adding a potentiometer or the ability to spin
 
 ## Contributing
 
@@ -99,9 +103,4 @@ This project is not open for contribution as it is a masters degree project limi
 * **Akash** - *MSc Human Computer Interaction student* - [Akash]() - **
 * **Hazel** - *MSc Human Computer Interaction student* - [Hazel]() - **
 
-## Acknowledgements
-
-* []()
-* []()
-* []()
 
