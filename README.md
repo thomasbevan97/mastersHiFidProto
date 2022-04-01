@@ -99,7 +99,8 @@ This project is not open for contribution as it is a masters degree project limi
 ## Authors
 
 * **Thomas Paul Oehrling** - *MSc Human Computer Interaction student* - [Thomas Paul Oehrling](https://github.com/thomaspauloehrling/) - *Arduino, Rapberry Pi and Central Microbit and README file*
-* **Anna Rykalová** - *MSc Human Computer Interaction student* - [Anna Rykalová]() - *Code for NeoPixel *
-* **Akash Umesh Wadekar** - *MSc Human Computer Interaction student* - [Akash]() - **
+* **Anna Rykalová** - *MSc Human Computer Interaction student* - [Anna Rykalová]() - *Microbit NeoPixel *
+* **Akash Umesh Wadekar** - *MSc Human Computer Interaction student* - [Akash]() - *Microbit Motors*
+* * **Hazel Gao** - *MSc Human Computer Interaction student* - [Hazel Gao]() - *Microbit LED Lights*
 
 
